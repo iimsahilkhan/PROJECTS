@@ -1,5 +1,4 @@
-# Aman Gautam
-students = []
+students = []  
 while True:
     print("\n1. Add Student")
     print("2. View Single Student")

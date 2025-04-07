@@ -1,8 +1,9 @@
 import random
+import string
 
 print("Welcome to Your Passwaord Generator")
 
-chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@$&0123456789"
+char_val = string.ascii_letters + string.punctuation + string.digits
 
 number = int(input("Enter Amount of Password to Generate: "))
 
@@ -13,5 +14,5 @@ print("\nHere are Your Password")
 for pwd in range(number):
     password = ""
     for c in range(length):
-        password += random.choice(chars)
+        password += random.choice(char_val)
     print(password)

@@ -1,5 +1,5 @@
-import requests  # To make HTTP requests to the weather API
-import json  # To handle JSON responses
+import requests  # Requests is an HTTP library, To make HTTP requests to the weather API
+import json  # is a subset of JavaScript syntax, used as a lightweight data interchange format.
 import pyttsx3  # For text-to-speech conversion
 
 engine = pyttsx3.init() # initializes the text-to-speech engine.

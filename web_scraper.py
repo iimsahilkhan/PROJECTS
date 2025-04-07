@@ -2,7 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 
 # URL to scrape (example: BBC News)
-url = "https://www.livemint.com/news"
+url = "https://www.bbc.com/news"    #we can take input when we khonw link
+                                     # url = input("Enter Website: ")
 
 # Send a GET request to the website
 response = requests.get(url)
@@ -23,6 +24,6 @@ else:
     print(f"Failed to retrieve the page. Status code: {response.status_code}")
 
 # Optional: Save to a file
-with open("headlines.txt", "w", encoding="utf-8") as file:
+'''with open("headlines.txt", "w", encoding="utf-8") as file:
     for headline in headlines[:5]:
-        file.write(f"{headline.get_text().strip()}\n")
+        file.write(f"{headline.get_text().strip()}\n")'''

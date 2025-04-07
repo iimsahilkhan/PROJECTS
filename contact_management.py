@@ -1,3 +1,7 @@
+import pyttsx3
+
+engine = pyttsx3.init()
+
 print("    CONTACTS    ")
 print("----------------")
 print("(+) to create contact \n (-) to delete contact \n (search) to search \n "
@@ -24,11 +28,15 @@ while(choice!="exit"):
         name=input("enter name : ")
         if name in contacts:
             print(f"contact already exists")
+            engine.say(f"contact already exist")
+            engine.runAndWait()
         else:
             ph_num=eval(input("enter ph number : "))
             email=input("enter email :")
             add_contact(name,ph_num,email)
             print("contact added succesfully \n ")
+            engine.say(f"contact added succesfully")
+            engine.runAndWait()
     elif(choice=="-"):
         name=input("enter name: ")
         if name in contacts:
